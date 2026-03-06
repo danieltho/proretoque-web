@@ -1,0 +1,72 @@
+{
+  "content": [
+    {
+      "id": "sec_title_template",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": { "size": 1260, "unit": "px" },
+        "padding": {
+          "top": "60",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "unit": "px",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "col_title_template",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "w_title_template_heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Sobre Nosotros",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "700",
+                "typography_font_size": { "size": 40, "unit": "px" },
+                "typography_line_height": { "size": 48, "unit": "px" }
+              }
+            },
+            {
+              "id": "w_title_template_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Somos una plataforma de retoque fotogr\u00e1fico profesional especializada en ecommerce y editorial, apoyada en un equipo dedicado y una tecnolog\u00eda propia con IA creativa integrada, que optimiza procesos y ampl\u00eda las posibilidades visuales bajo decisi\u00f3n del cliente.",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": { "size": 16, "unit": "px" },
+                "typography_line_height": { "size": 19.2, "unit": "px" }
+              }
+            },
+            {
+              "id": "w_title_template_divider",
+              "elType": "widget",
+              "widgetType": "divider",
+              "settings": {
+                "color": "#000000",
+                "weight": { "size": 2, "unit": "px" },
+                "gap": { "size": 20, "unit": "px" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "version": "0.4",
+  "title": "Title Template",
+  "type": "section"
+}

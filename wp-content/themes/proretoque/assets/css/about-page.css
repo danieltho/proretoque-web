@@ -1,0 +1,515 @@
+/* ============================================
+   ProRetoque About Page - Figma Design Tokens
+   Font: Raleway | Colors: #000, #FFF, #F5F5F5, #707372, #9EA2A2
+   ============================================ */
+
+/* --- Reset & Global --- */
+body.elementor-page * {
+  font-family: 'Raleway', sans-serif;
+}
+
+.elementor-page .elementor-section {
+  max-width: 100%;
+}
+
+.elementor-section .elementor-container {
+  max-width: 1260px;
+}
+
+/* --- Bordered card sections: constrain to 1260px --- */
+.elementor-page .prt-bordered-card {
+  max-width: 1260px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+.elementor-page .prt-bordered-card > .elementor-container {
+  max-width: 100%;
+}
+
+/* --- Wide gap sections (127px gap between columns) --- */
+.elementor-page .prt-gap-127 > .elementor-container {
+  gap: 127px;
+}
+
+/* --- Cards gap (20px between cards) --- */
+.elementor-page .prt-gap-20 > .elementor-container {
+  gap: 20px;
+}
+
+/* --- Typography: Headings --- */
+.elementor-page .elementor-widget-heading .elementor-heading-title {
+  font-family: 'Raleway', sans-serif !important;
+  color: #000000;
+}
+
+/* H1 */
+.elementor-page h1.elementor-heading-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+/* H2 */
+.elementor-page h2.elementor-heading-title {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+}
+
+/* H3 */
+.elementor-page h3.elementor-heading-title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+}
+
+/* --- Typography: Body text --- */
+.elementor-page .elementor-widget-text-editor {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+}
+
+.elementor-page .elementor-widget-text-editor p {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.elementor-page .elementor-widget-text-editor strong {
+  font-weight: 600;
+}
+
+/* --- Divider --- */
+.elementor-page .elementor-divider-separator {
+  border-top-color: #000000;
+  border-top-width: 2px;
+}
+
+/* --- Tabs Widget (Figma: ProRetoque / Clientes) --- */
+.elementor-page .elementor-widget-tabs .elementor-tab-title {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  color: #707372 !important;
+  border: none !important;
+  background: none !important;
+  padding: 0 32px 8px 0 !important;
+}
+
+.elementor-page .elementor-widget-tabs .elementor-tab-title.elementor-active {
+  color: #000000 !important;
+}
+
+.elementor-page .elementor-widget-tabs .elementor-tabs-content-wrapper {
+  border: none !important;
+  padding: 24px 0 0 0 !important;
+}
+
+.elementor-page .elementor-widget-tabs .elementor-tab-content {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.elementor-page .elementor-widget-tabs .elementor-tabs-wrapper {
+  border-bottom: none !important;
+  display: flex;
+  gap: 66px;
+}
+
+/* --- Buttons: Outline style (Figma Button B) --- */
+.elementor-page .elementor-widget-button .elementor-button {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  border-radius: 8px;
+  padding: 10px 16px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* --- Cards: 32px gap between heading and text --- */
+.elementor-page .prt-card > .elementor-widget-wrap {
+  gap: 32px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Accordion Widget --- */
+.elementor-page .elementor-widget-accordion .elementor-accordion-item {
+  border-top: 2px solid #000000 !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.elementor-page .elementor-widget-accordion .elementor-tab-title {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 19.2px;
+  color: #000000 !important;
+  background: transparent !important;
+  padding: 24px 16px !important;
+}
+
+.elementor-page .elementor-widget-accordion .elementor-tab-title .elementor-accordion-icon {
+  color: #000000;
+}
+
+.elementor-page .elementor-widget-accordion .elementor-tab-content {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+  padding: 0 16px 24px 16px !important;
+  border: none !important;
+}
+
+/* --- Counter Widget (Metrics) - Horizontal layout --- */
+.elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter-number-wrapper {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter-number-prefix,
+.elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter-number-suffix {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter-title {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+  text-align: left;
+  width: 84px;
+}
+
+/* --- Shortcode / CF7 Form styling --- */
+.elementor-page .wpcf7 input[type="text"],
+.elementor-page .wpcf7 input[type="email"],
+.elementor-page .wpcf7 input[type="tel"],
+.elementor-page .wpcf7 textarea,
+.elementor-page .wpcf7 select {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background: #F5F5F5;
+  border: 1px solid #9EA2A2;
+  border-radius: 8px;
+  padding: 12px 16px;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #000000;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.elementor-page .wpcf7 input::placeholder,
+.elementor-page .wpcf7 textarea::placeholder {
+  color: #9EA2A2;
+}
+
+.elementor-page .wpcf7 textarea {
+  height: 132px;
+  resize: vertical;
+}
+
+.elementor-page .wpcf7 .form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 25px;
+}
+
+.elementor-page .wpcf7 .form-grid > div {
+  flex: 0 0 calc(50% - 13px);
+}
+
+.elementor-page .wpcf7 input[type="submit"],
+.elementor-page .wpcf7 .wpcf7-submit {
+  width: 100%;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: opacity 0.2s;
+}
+
+.elementor-page .wpcf7 input[type="submit"]:hover {
+  opacity: 0.85;
+}
+
+.elementor-page .wpcf7 .wpcf7-acceptance label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.elementor-page .wpcf7 .wpcf7-acceptance input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.elementor-page .wpcf7 .consulta-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+  margin: 0 0 16px;
+}
+
+/* --- Tipo de Consulta: Radio as toggle buttons --- */
+.elementor-page .wpcf7 .consulta-btns .wpcf7-radio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  align-items: center;
+}
+
+.elementor-page .wpcf7 .consulta-btns .wpcf7-list-item {
+  margin: 0;
+}
+
+.elementor-page .wpcf7 .consulta-btns .wpcf7-list-item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.elementor-page .wpcf7 .consulta-btns .wpcf7-list-item label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 10px 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Active state: checked radio */
+.elementor-page .wpcf7 .consulta-btns .wpcf7-list-item label:has(input:checked) {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.elementor-page .wpcf7 .consulta-btns .wpcf7-list-item label:has(input:checked) .wpcf7-list-item-label {
+  color: #FFFFFF;
+}
+
+/* Hover state */
+.elementor-page .wpcf7 .consulta-btns .wpcf7-list-item label:hover {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.elementor-page .wpcf7 .consulta-btns .wpcf7-list-item label:hover .wpcf7-list-item-label {
+  color: #FFFFFF;
+}
+
+/* --- Phone input row in contact left column --- */
+.elementor-page .prt-phone-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.elementor-page .prt-phone-row .prt-phone-input {
+  flex: 0 0 300px;
+}
+
+.elementor-page .prt-phone-row .prt-phone-input input {
+  width: 100%;
+  height: 40px;
+  background: #F5F5F5;
+  border: 1px solid #9EA2A2;
+  border-radius: 8px;
+  padding: 12px 16px 12px 48px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.elementor-page .prt-phone-row .prt-phone-input input::placeholder {
+  color: #9EA2A2;
+}
+
+.elementor-page .prt-phone-row .prt-phone-input {
+  position: relative;
+}
+
+.elementor-page .prt-phone-row .prt-phone-input::before {
+  content: "\f095";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #000000;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.elementor-page .prt-phone-row .prt-phone-btn {
+  flex: 1;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  text-decoration: none;
+}
+
+.elementor-page .prt-phone-row .prt-phone-btn:hover {
+  opacity: 0.85;
+}
+
+.elementor-page .wpcf7 p {
+  margin: 0 0 16px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .elementor-page .prt-gap-127 > .elementor-container {
+    gap: 60px;
+  }
+
+  .elementor-page .elementor-widget-tabs .elementor-tabs-wrapper {
+    gap: 32px;
+  }
+
+  .elementor-page .elementor-widget-tabs .elementor-tab-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .elementor-page .prt-gap-127 > .elementor-container {
+    gap: 30px;
+  }
+
+  .elementor-page h1.elementor-heading-title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .elementor-page h2.elementor-heading-title {
+    font-size: 22px;
+    line-height: 26.4px;
+  }
+
+  .elementor-page .elementor-widget-tabs .elementor-tabs-wrapper {
+    gap: 20px;
+  }
+
+  .elementor-page .elementor-widget-tabs .elementor-tab-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .elementor-page .wpcf7 .form-grid > div {
+    flex: 0 0 100%;
+  }
+
+  .elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter-number-wrapper,
+  .elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter-number-prefix,
+  .elementor-page .prt-bordered-card .elementor-widget-counter .elementor-counter-number-suffix {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .elementor-page .prt-phone-row {
+    flex-direction: column;
+  }
+
+  .elementor-page .prt-phone-row .prt-phone-input {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .elementor-page .prt-phone-row .prt-phone-btn {
+    width: 100%;
+  }
+}

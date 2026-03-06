@@ -1,0 +1,754 @@
+{
+  "content": [
+    {
+      "id": "sec_hero",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {"size": 1260, "unit": "px"},
+        "padding": {"top": "60", "right": "0", "bottom": "0", "left": "0", "unit": "px", "isLinked": false}
+      },
+      "elements": [
+        {
+          "id": "col_hero",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_hero_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Sobre Nosotros",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "700",
+                "typography_font_size": {"size": 40, "unit": "px"},
+                "typography_line_height": {"size": 48, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_hero_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Somos una plataforma de retoque fotogr\u00e1fico profesional especializada en ecommerce y editorial, apoyada en un equipo dedicado y una tecnolog\u00eda propia con IA creativa integrada, que optimiza procesos y ampl\u00eda las posibilidades visuales bajo decisi\u00f3n del cliente.",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "typography_line_height": {"size": 19.2, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_hero_divider",
+              "elType": "widget",
+              "widgetType": "divider",
+              "settings": {
+                "color": "#000000",
+                "weight": {"size": 2, "unit": "px"},
+                "gap": {"size": 20, "unit": "px"}
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_tabs",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {"size": 1260, "unit": "px"},
+        "gap": "no",
+        "padding": {"top": "90", "right": "0", "bottom": "0", "left": "0", "unit": "px", "isLinked": false},
+        "css_classes": "prt-gap-127"
+      },
+      "elements": [
+        {
+          "id": "col_tabs_img",
+          "elType": "column",
+          "settings": {
+            "_column_size": 41,
+            "background_background": "classic",
+            "background_color": "#D9D9D9",
+            "border_radius": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+            "min_height": {"size": 244, "unit": "px"}
+          },
+          "elements": [
+            {
+              "id": "w_tabs_image",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {"url": "", "id": ""},
+                "image_size": "full",
+                "_element_custom_width": {"size": 100, "unit": "%"},
+                "height": {"size": 244, "unit": "px"},
+                "object-fit": "cover",
+                "border_radius": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true}
+              }
+            }
+          ]
+        },
+        {
+          "id": "col_tabs_content",
+          "elType": "column",
+          "settings": {"_column_size": 59},
+          "elements": [
+            {
+              "id": "w_tabs",
+              "elType": "widget",
+              "widgetType": "tabs",
+              "settings": {
+                "tabs": [
+                  {
+                    "_id": "tab_proretoque",
+                    "tab_title": "ProRetoque",
+                    "tab_content": "<p>ProRetoque nace de una realidad compartida por empresas y fot\u00f3grafos: cuando el volumen aumenta y los plazos se acortan, la edici\u00f3n puede convertirse en un punto cr\u00edtico.</p><p>Por eso desarrollamos, al ritmo del sector, un modelo h\u00edbrido que combina retoque profesional, tecnolog\u00eda con IA integrada y un trato personalizado adaptado a cada din\u00e1mica de trabajo.</p><p>No se trata solo de retocar, sino de aportar estructura, continuidad y calidad.</p>"
+                  },
+                  {
+                    "_id": "tab_clientes",
+                    "tab_title": "Clientes",
+                    "tab_content": "<p>Algunos de nuestros clientes:</p><p>Massimo Dutti, Zara, Loewe, Silbon, Mango, \u00c1lvaro Moreno, Lefties, Polo Club, Laagam, Blue Banana, Parfois, D\u00e9cimas, Camper, Salerm, 3ina, Sklum</p>"
+                  }
+                ],
+                "type": "horizontal",
+                "tab_title_color": "#707372",
+                "tab_active_color": "#000000",
+                "tab_title_typography_typography": "custom",
+                "tab_title_typography_font_family": "Raleway",
+                "tab_title_typography_font_weight": "600",
+                "tab_title_typography_font_size": {"size": 26, "unit": "px"},
+                "tab_content_typography_typography": "custom",
+                "tab_content_typography_font_family": "Raleway",
+                "tab_content_typography_font_weight": "400",
+                "tab_content_typography_font_size": {"size": 16, "unit": "px"},
+                "content_color": "#000000"
+              }
+            },
+            {
+              "id": "w_tabs_btn",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Cont\u00e1ctanos",
+                "link": {"url": "#contacto", "is_external": false, "nofollow": false},
+                "align": "left",
+                "button_type": "default",
+                "background_color": "#FFFFFF",
+                "button_text_color": "#000000",
+                "border_border": "solid",
+                "border_width": {"top": "1", "right": "1", "bottom": "1", "left": "1", "unit": "px", "isLinked": true},
+                "border_color": "#000000",
+                "border_radius": {"top": "8", "right": "8", "bottom": "8", "left": "8", "unit": "px", "isLinked": true},
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "button_background_hover_color": "#000000",
+                "hover_color": "#FFFFFF"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_cards",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {"size": 1260, "unit": "px"},
+        "structure": "30",
+        "gap": "no",
+        "padding": {"top": "90", "right": "0", "bottom": "0", "left": "0", "unit": "px", "isLinked": false},
+        "css_classes": "prt-gap-20"
+      },
+      "elements": [
+        {
+          "id": "col_card1",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "border_border": "solid",
+            "border_width": {"top": "1", "right": "1", "bottom": "1", "left": "1", "unit": "px", "isLinked": true},
+            "border_color": "#000000",
+            "border_radius": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+            "padding": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+            "css_classes": "prt-card"
+          },
+          "elements": [
+            {
+              "id": "w_card1_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "IA AL SERVICIO DE TU MARCA",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 22, "unit": "px"},
+                "typography_line_height": {"size": 26.4, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_card1_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Optimizamos procesos y ampliamos posibilidades visuales sin perder tu identidad",
+                "align": "center",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "typography_line_height": {"size": 19.2, "unit": "px"}
+              }
+            }
+          ]
+        },
+        {
+          "id": "col_card2",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "border_border": "solid",
+            "border_width": {"top": "1", "right": "1", "bottom": "1", "left": "1", "unit": "px", "isLinked": true},
+            "border_color": "#000000",
+            "border_radius": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+            "padding": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+            "css_classes": "prt-card"
+          },
+          "elements": [
+            {
+              "id": "w_card2_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "IA AL SERVICIO DE TU MARCA",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 22, "unit": "px"},
+                "typography_line_height": {"size": 26.4, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_card2_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Optimizamos procesos y ampliamos posibilidades visuales sin perder tu identidad",
+                "align": "center",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "typography_line_height": {"size": 19.2, "unit": "px"}
+              }
+            }
+          ]
+        },
+        {
+          "id": "col_card3",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "border_border": "solid",
+            "border_width": {"top": "1", "right": "1", "bottom": "1", "left": "1", "unit": "px", "isLinked": true},
+            "border_color": "#000000",
+            "border_radius": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+            "padding": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+            "css_classes": "prt-card"
+          },
+          "elements": [
+            {
+              "id": "w_card3_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "IA AL SERVICIO DE TU MARCA",
+                "header_size": "h3",
+                "align": "center",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 22, "unit": "px"},
+                "typography_line_height": {"size": 26.4, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_card3_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Optimizamos procesos y ampliamos posibilidades visuales sin perder tu identidad",
+                "align": "center",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "typography_line_height": {"size": 19.2, "unit": "px"}
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_why",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {"size": 1260, "unit": "px"},
+        "gap": "no",
+        "padding": {"top": "90", "right": "0", "bottom": "0", "left": "0", "unit": "px", "isLinked": false},
+        "css_classes": "prt-gap-127"
+      },
+      "elements": [
+        {
+          "id": "col_why_left",
+          "elType": "column",
+          "settings": {"_column_size": 49},
+          "elements": [
+            {
+              "id": "w_why_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\u00bfPor qu\u00e9 elegirnos?",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "600",
+                "typography_font_size": {"size": 26, "unit": "px"},
+                "typography_line_height": {"size": 31.2, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_why_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p><strong>Somos un partner visual.</strong> Sostenemos tu identidad y cuidamos cada imagen como parte de un todo.</p><p>La <strong>imagen</strong> no se delega sin m\u00e1s: se acompa\u00f1a. Trabajamos desde una visi\u00f3n compartida para que cada entrega mantenga coherencia, calidad y nivel.</p><p>Variedad de <strong>retoques</strong>. Eficiencia real en el flujo de trabajo. Rentabilidad sin perder calidad. <strong>Generaci\u00f3n de im\u00e1genes con IA</strong> e IA aplicada al marketing para optimizar procesos.</p><p>Compromiso real en plazos exigentes. <strong>Nuestro objetivo es claro:</strong> que destaques frente a la competencia y que tu imagen siempre est\u00e9 a la altura.</p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "typography_line_height": {"size": 19.2, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_why_btn",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Proyectos Recientes",
+                "link": {"url": "#", "is_external": false, "nofollow": false},
+                "align": "left",
+                "background_color": "#FFFFFF",
+                "button_text_color": "#000000",
+                "border_border": "solid",
+                "border_width": {"top": "1", "right": "1", "bottom": "1", "left": "1", "unit": "px", "isLinked": true},
+                "border_color": "#000000",
+                "border_radius": {"top": "8", "right": "8", "bottom": "8", "left": "8", "unit": "px", "isLinked": true},
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "button_background_hover_color": "#000000",
+                "hover_color": "#FFFFFF"
+              }
+            }
+          ]
+        },
+        {
+          "id": "col_why_right",
+          "elType": "column",
+          "settings": {"_column_size": 51},
+          "elements": [
+            {
+              "id": "w_accordion",
+              "elType": "widget",
+              "widgetType": "accordion",
+              "settings": {
+                "tabs": [
+                  {
+                    "_id": "acc_01",
+                    "tab_title": "01 \u2014 EXPERIENCIA",
+                    "tab_content": "Retoque de im\u00e1genes para marcas exigentes que quieren que el retoque sea una parte estrat\u00e9gica del proceso."
+                  },
+                  {
+                    "_id": "acc_02",
+                    "tab_title": "02 \u2014 CALIDAD",
+                    "tab_content": "Est\u00e1ndares de calidad que garantizan resultados impecables en cada proyecto."
+                  },
+                  {
+                    "_id": "acc_03",
+                    "tab_title": "03 \u2014 TECNOLOG\u00cdA",
+                    "tab_content": "Herramientas de \u00faltima generaci\u00f3n combinadas con IA para resultados superiores."
+                  },
+                  {
+                    "_id": "acc_04",
+                    "tab_title": "04 \u2014 COMPROMISO",
+                    "tab_content": "Compromiso total con los plazos de entrega y la satisfacci\u00f3n del cliente."
+                  }
+                ],
+                "selected_icon": {"value": "fas fa-plus", "library": "fa-solid"},
+                "selected_active_icon": {"value": "fas fa-minus", "library": "fa-solid"},
+                "title_color": "#000000",
+                "title_background": "#FFFFFF",
+                "tab_active_color": "#000000",
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Raleway",
+                "title_typography_font_weight": "600",
+                "title_typography_font_size": {"size": 16, "unit": "px"},
+                "content_color": "#000000",
+                "content_typography_typography": "custom",
+                "content_typography_font_family": "Raleway",
+                "content_typography_font_weight": "400",
+                "content_typography_font_size": {"size": 16, "unit": "px"},
+                "border_color": "#000000"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_metrics",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {"size": 1260, "unit": "px"},
+        "structure": "30",
+        "gap": "no",
+        "padding": {"top": "0", "right": "0", "bottom": "0", "left": "0", "unit": "px", "isLinked": false},
+        "border_border": "solid",
+        "border_width": {"top": "1", "right": "1", "bottom": "1", "left": "1", "unit": "px", "isLinked": true},
+        "border_color": "#000000",
+        "border_radius": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+        "margin": {"top": "90", "right": "auto", "bottom": "0", "left": "auto", "unit": "px", "isLinked": false},
+        "css_classes": "prt-bordered-card"
+      },
+      "elements": [
+        {
+          "id": "col_metric1",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "padding": {"top": "32", "right": "40", "bottom": "32", "left": "80", "unit": "px", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "w_counter1",
+              "elType": "widget",
+              "widgetType": "counter",
+              "settings": {
+                "starting_number": 0,
+                "ending_number": 50,
+                "prefix": "+",
+                "suffix": "K",
+                "title": "Trabajos Completas",
+                "number_color": "#000000",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "700",
+                "typography_font_size": {"size": 40, "unit": "px"},
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Raleway",
+                "title_typography_font_weight": "600",
+                "title_typography_font_size": {"size": 16, "unit": "px"}
+              }
+            }
+          ]
+        },
+        {
+          "id": "col_metric2",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "border_border": "solid",
+            "border_width": {"top": "0", "right": "0", "bottom": "0", "left": "1", "unit": "px", "isLinked": false},
+            "border_color": "#000000",
+            "padding": {"top": "32", "right": "40", "bottom": "32", "left": "40", "unit": "px", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "w_counter2",
+              "elType": "widget",
+              "widgetType": "counter",
+              "settings": {
+                "starting_number": 0,
+                "ending_number": 50,
+                "prefix": "+",
+                "suffix": "K",
+                "title": "Trabajos Completas",
+                "number_color": "#000000",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "700",
+                "typography_font_size": {"size": 40, "unit": "px"},
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Raleway",
+                "title_typography_font_weight": "600",
+                "title_typography_font_size": {"size": 16, "unit": "px"}
+              }
+            }
+          ]
+        },
+        {
+          "id": "col_metric3",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "border_border": "solid",
+            "border_width": {"top": "0", "right": "0", "bottom": "0", "left": "1", "unit": "px", "isLinked": false},
+            "border_color": "#000000",
+            "padding": {"top": "32", "right": "80", "bottom": "32", "left": "40", "unit": "px", "isLinked": false}
+          },
+          "elements": [
+            {
+              "id": "w_counter3",
+              "elType": "widget",
+              "widgetType": "counter",
+              "settings": {
+                "starting_number": 0,
+                "ending_number": 50,
+                "prefix": "+",
+                "suffix": "K",
+                "title": "Trabajos Completas",
+                "number_color": "#000000",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "700",
+                "typography_font_size": {"size": 40, "unit": "px"},
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Raleway",
+                "title_typography_font_weight": "600",
+                "title_typography_font_size": {"size": 16, "unit": "px"}
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_contact",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {"size": 1260, "unit": "px"},
+        "gap": "no",
+        "padding": {"top": "32", "right": "0", "bottom": "32", "left": "0", "unit": "px", "isLinked": false},
+        "border_border": "solid",
+        "border_width": {"top": "1", "right": "1", "bottom": "1", "left": "1", "unit": "px", "isLinked": true},
+        "border_color": "#000000",
+        "border_radius": {"top": "20", "right": "20", "bottom": "20", "left": "20", "unit": "px", "isLinked": true},
+        "margin": {"top": "90", "right": "auto", "bottom": "90", "left": "auto", "unit": "px", "isLinked": false},
+        "css_classes": "prt-bordered-card"
+      },
+      "elements": [
+        {
+          "id": "col_contact_left",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50,
+            "padding": {"top": "32", "right": "32", "bottom": "32", "left": "32", "unit": "px", "isLinked": true}
+          },
+          "elements": [
+            {
+              "id": "w_contact_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Resolvemos tus dudas",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "600",
+                "typography_font_size": {"size": 26, "unit": "px"},
+                "typography_line_height": {"size": 31.2, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_contact_desc",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Si <strong>buscas informaci\u00f3n</strong> o necesitas un retoque concreto, <strong>env\u00edanos un mensaje</strong> y lo valoramos contigo.</p><p>Puedes contactarnos desde este formulario o por nuestros otros canales. Te responderemos con rapidez y enfoque resolutivo.</p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"},
+                "typography_line_height": {"size": 19.2, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_horario_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Horario",
+                "header_size": "h3",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 22, "unit": "px"},
+                "typography_line_height": {"size": 26.4, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_horario_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p><strong>Lunes - Jueves</strong><br>09:00 - 18:00</p><p><strong>Viernes</strong><br>09:00 - 17:00</p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_email_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Email",
+                "header_size": "h3",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 22, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_email_text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "hola@proretoque.photo",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_phone_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "\u00bfPrefieres consultarlo por tel\u00e9fono?",
+                "header_size": "h3",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "500",
+                "typography_font_size": {"size": 22, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_phone_row",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"prt-phone-row\"><div class=\"prt-phone-input\"><input type=\"tel\" placeholder=\"Introducir n\u00famero de tel\u00e9fono\"></div><a href=\"tel:+34600000000\" class=\"prt-phone-btn\">Te llamamos</a></div>"
+              }
+            }
+          ]
+        },
+        {
+          "id": "col_contact_right",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50,
+            "padding": {"top": "32", "right": "32", "bottom": "32", "left": "32", "unit": "px", "isLinked": true}
+          },
+          "elements": [
+            {
+              "id": "w_form_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Dinos qu\u00e9 necesitas",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "600",
+                "typography_font_size": {"size": 26, "unit": "px"},
+                "typography_line_height": {"size": 31.2, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_form_subtitle",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "Estamos listos para ayudarte con cada detalle.",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Raleway",
+                "typography_font_weight": "400",
+                "typography_font_size": {"size": 16, "unit": "px"}
+              }
+            },
+            {
+              "id": "w_contact_form",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": {
+                "shortcode": "[contact-form-7 id=\"14\" title=\"Formulario About - ProRetoque\"]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "template": "elementor_canvas"
+  },
+  "version": "0.4",
+  "title": "Sobre Nosotros - About Page",
+  "type": "page"
+}

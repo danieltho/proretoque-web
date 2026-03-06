@@ -1,0 +1,24 @@
+# Environment
+.env
+.DS_Store
+
+# WordPress core (managed by Docker)
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+
+# Node
+node_modules/
+
+# Plugins (install via composer/wp-cli, not git)
+wp-content/plugins/akismet/
+wp-content/plugins/elementor/
+
+# Languages (generated)
+wp-content/languages/
+
+# OS
+Thumbs.db
+*.swp
+*.swo
+*~
