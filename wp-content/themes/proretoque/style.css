@@ -145,13 +145,20 @@ footer.wp-block-template-part:empty {
    Marcas Grid
    ========================================================================== */
 
-.marcas-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.marcas-grid__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 90px;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 20px;
 }
 
 .marcas-grid__item {
@@ -159,25 +166,51 @@ footer.wp-block-template-part:empty {
   overflow: hidden;
   border-radius: 20px;
   position: relative;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Asymmetric pattern: 1st, 4th, 7th… span 2 cols; 2nd, 5th, 8th… span 1 */
-.marcas-grid__item:nth-child(3n + 1) {
-  grid-column: span 2;
+.marcas-grid__item:hover {
+  box-shadow:
+    10px 10px 30px 0px rgba(174, 174, 192, 0.4),
+    -10px -10px 30px 0px #fff;
+}
+
+/* Asymmetric pattern: rows alternate 3/4+1/4 and 1/4+3/4 — classes set by PHP */
+.marcas-grid__item--large {
+  grid-column: span 3;
+}
+
+.marcas-grid__item--small {
+  grid-column: span 1;
+}
+
+.marcas-grid__item--small .marcas-grid__image {
+  position: absolute;
+  inset: 0;
+  padding-bottom: 0;
+}
+
+.marcas-grid__item--alone .marcas-grid__image {
+  position: static;
+  padding-bottom: 60%;
 }
 
 .marcas-grid__image {
   width: 100%;
   padding-bottom: 60%;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  background-color: #D9D9D9;
+  background-color: #ebebeb;
   border-radius: 20px;
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
+
 .marcas-grid__item:hover .marcas-grid__image {
-  transform: scale(1.03);
+  box-shadow:
+    0px 12px 60px -4px rgba(0, 0, 0, 0.08),
+    0px 4px 10px -2px rgba(0, 0, 0, 0.03);
 }
 
 .marcas-grid__image--placeholder {
@@ -185,26 +218,39 @@ footer.wp-block-template-part:empty {
 }
 
 .marcas-grid__info {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 12px 0 0;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.marcas-grid__item:hover .marcas-grid__info {
+  opacity: 1;
 }
 
 .marcas-grid__name {
   font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19.2px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
   color: #000;
+  text-align: center;
 }
 
 .marcas-grid__count {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 16.8px;
-  color: #707372;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  text-align: center;
 }
 
 /* Tablet */
@@ -221,8 +267,13 @@ footer.wp-block-template-part:empty {
     padding: 0 20px;
   }
 
-  .marcas-grid__item:nth-child(3n + 1) {
-    grid-column: span 1;
+  .marcas-grid__item {
+    grid-column: span 1 !important;
+  }
+
+  .marcas-grid__item--small .marcas-grid__image {
+    position: static;
+    padding-bottom: 60%;
   }
 }
 
