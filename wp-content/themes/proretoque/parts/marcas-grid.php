@@ -29,8 +29,9 @@ if ( ! $marcas->have_posts() ) {
                 $size_class .= ' marcas-grid__item--alone';
             }
 
-            $thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'large' ) ?: '';
-            $title     = get_the_title();
+            $thumb_url  = get_the_post_thumbnail_url( get_the_ID(), 'large' ) ?: '';
+            $title      = get_the_title();
+            $slug       = sanitize_title( $title );
             $content   = apply_filters( 'the_content', get_the_content() );
 
             // Collect gallery image URLs from attached images.
@@ -68,8 +69,9 @@ if ( ! $marcas->have_posts() ) {
             $image_count = count( $gallery_images );
         ?>
         <article class="marcas-grid__item <?php echo esc_attr( $size_class ); ?>"
+                data-marca-slug="<?php echo esc_attr( $slug ); ?>"
                 data-marca-title="<?php echo esc_attr( $title ); ?>"
-                data-marca-description="<?php echo esc_attr( $content ); ?>"
+                data-marca-description="<?php echo esc_attr( get_the_excerpt() ); ?>"
                 data-marca-images="<?php echo esc_attr( wp_json_encode( $gallery_images ) ); ?>">
             <?php if ( $thumb_url ) : ?>
                 <div class="marcas-grid__image" style="background-image: url('<?php echo esc_url( $thumb_url ); ?>')"></div>
@@ -87,4 +89,6 @@ if ( ! $marcas->have_posts() ) {
         <?php endwhile; wp_reset_postdata(); ?>
     </div>
 </div>
-<?php include get_stylesheet_directory() . '/parts/marcas-lightbox.php'; ?>
+<div class="alignfull marcas-grid-detail__container" id="marcasGridDetailContainer" aria-hidden="true">
+    <?php include get_stylesheet_directory() . '/parts/marcas-lightbox.php'; ?>
+</div>
