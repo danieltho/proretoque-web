@@ -118,6 +118,14 @@ add_action( 'init', function () {
     ] );
 } );
 
+// Hide page title on pages that use the marcas shortcode.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_marcas' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
+
 // Shortcode: [proretoque_marcas].
 add_shortcode( 'proretoque_marcas', function () {
     ob_start();

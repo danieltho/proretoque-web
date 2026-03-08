@@ -10,6 +10,15 @@ Requires PHP: 7.2
 Text Domain: proretoque
 */
 
+main {
+  margin-top: 0 !important;
+}
+
+main > *:first-child {
+  padding-top: 0 !important;
+  padding-bottom: 0px !important;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -150,13 +159,13 @@ footer.wp-block-template-part:empty {
   flex-wrap: wrap;
   align-items: center;
   max-width: 1260px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 90px;
 }
 
 .marcas-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   width: 100%;
   gap: 20px;
 }
@@ -164,15 +173,15 @@ footer.wp-block-template-part:empty {
 .marcas-grid__item {
   cursor: pointer;
   overflow: hidden;
-  border-radius: 20px;
   position: relative;
   transition: box-shadow 0.3s ease;
 }
 
 .marcas-grid__item:hover {
-  box-shadow:
-    10px 10px 30px 0px rgba(174, 174, 192, 0.4),
-    -10px -10px 30px 0px #fff;
+  background: rgba(255, 255, 255, 0.20);
+
+  /* neuphosmism */
+  box-shadow: 10px 10px 30px 0 rgba(69, 132, 255, 0.40), -10px -10px 30px 0 rgba(69, 132, 255, 0.20);
 }
 
 /* Asymmetric pattern: rows alternate 3/4+1/4 and 1/4+3/4 — classes set by PHP */
@@ -181,7 +190,8 @@ footer.wp-block-template-part:empty {
 }
 
 .marcas-grid__item--small {
-  grid-column: span 1;
+  grid-column: span 2;
+  
 }
 
 .marcas-grid__item--small .marcas-grid__image {
@@ -202,7 +212,6 @@ footer.wp-block-template-part:empty {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ebebeb;
-  border-radius: 20px;
   transition: box-shadow 0.3s ease;
 }
 
@@ -237,9 +246,9 @@ footer.wp-block-template-part:empty {
 
 .marcas-grid__name {
   font-family: 'Raleway', sans-serif;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 26.4px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
   color: #000;
   text-align: center;
 }
@@ -255,14 +264,14 @@ footer.wp-block-template-part:empty {
 
 /* Tablet */
 @media (max-width: 1259px) {
-  .marcas-grid {
-    padding: 0 40px;
+  .marcas-grid__container {
+    padding: 0px 40px;
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-  .marcas-grid {
+  .marcas-grid__container {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
