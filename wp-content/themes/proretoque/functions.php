@@ -93,6 +93,59 @@ add_action( 'elementor/preview/enqueue_styles', function () {
     );
 } );
 
+// Register CPT: Marca.
+add_action( 'init', function () {
+    register_post_type( 'marca', [
+        'labels' => [
+            'name'               => 'Marcas',
+            'singular_name'      => 'Marca',
+            'add_new'            => 'Añadir Marca',
+            'add_new_item'       => 'Añadir Nueva Marca',
+            'edit_item'          => 'Editar Marca',
+            'new_item'           => 'Nueva Marca',
+            'view_item'          => 'Ver Marca',
+            'search_items'       => 'Buscar Marcas',
+            'not_found'          => 'No se encontraron marcas',
+            'not_found_in_trash' => 'No se encontraron marcas en la papelera',
+        ],
+        'public'       => false,
+        'show_ui'      => true,
+        'show_in_rest' => true,
+        'has_archive'  => false,
+        'rewrite'      => [ 'slug' => 'marcas' ],
+        'supports'     => [ 'title', 'editor', 'thumbnail', 'excerpt' ],
+        'menu_icon'    => 'dashicons-format-gallery',
+    ] );
+} );
+
+// Hide page title on pages that use the marcas shortcode.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_marcas' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
+
+// Shortcode: [proretoque_marcas].
+add_shortcode( 'proretoque_marcas', function () {
+    ob_start();
+    include get_stylesheet_directory() . '/parts/marcas-grid.php';
+    return ob_get_clean();
+} );
+
+// Enqueue marcas lightbox JS.
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_admin() ) {
+        wp_enqueue_script(
+            'proretoque-marcas-lightbox',
+            get_stylesheet_directory_uri() . '/assets/js/marcas-lightbox.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+} );
+
 // AJAX handler for About page contact form.
 add_action( 'wp_ajax_proretoque_contact', 'proretoque_handle_contact_form' );
 add_action( 'wp_ajax_nopriv_proretoque_contact', 'proretoque_handle_contact_form' );

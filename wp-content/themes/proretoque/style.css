@@ -10,6 +10,15 @@ Requires PHP: 7.2
 Text Domain: proretoque
 */
 
+main {
+  margin-top: 0 !important;
+}
+
+main > *:first-child {
+  padding-top: 0 !important;
+  padding-bottom: 0px !important;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -138,6 +147,344 @@ footer.wp-block-template-part:empty {
 
   .site-header__logo img {
     height: 36px;
+  }
+}
+
+/* ==========================================================================
+   Marcas Grid
+   ========================================================================== */
+
+.marcas-grid__container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1260px;
+  margin: 20px auto;
+  padding: 0 90px;
+}
+
+.marcas-grid-detail__container {
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  gap: 20px;
+}
+
+.marcas-grid__item {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.marcas-grid__item:hover {
+  background: rgba(255, 255, 255, 0.20);
+
+  /* neuphosmism */
+  box-shadow: 10px 10px 30px 0 rgba(69, 132, 255, 0.40), -10px -10px 30px 0 rgba(69, 132, 255, 0.20);
+}
+
+/* Asymmetric pattern: rows alternate 3/4+1/4 and 1/4+3/4 — classes set by PHP */
+.marcas-grid__item--large {
+  grid-column: span 3;
+}
+
+.marcas-grid__item--small {
+  grid-column: span 2;
+  
+}
+
+.marcas-grid__item--small .marcas-grid__image {
+  position: absolute;
+  inset: 0;
+  padding-bottom: 0;
+}
+
+.marcas-grid__item--alone .marcas-grid__image {
+  position: static;
+  padding-bottom: 60%;
+}
+
+.marcas-grid__image {
+  width: 100%;
+  padding-bottom: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ebebeb;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.marcas-grid__item:hover .marcas-grid__image {
+  box-shadow:
+    0px 12px 60px -4px rgba(0, 0, 0, 0.08),
+    0px 4px 10px -2px rgba(0, 0, 0, 0.03);
+}
+
+.marcas-grid__image--placeholder {
+  background-color: #D9D9D9;
+}
+
+.marcas-grid__info {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.marcas-grid__item:hover .marcas-grid__info {
+  opacity: 1;
+}
+
+.marcas-grid__name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  color: #000;
+  text-align: center;
+}
+
+.marcas-grid__count {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 1259px) {
+  .marcas-grid__container {
+    padding: 0px 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .marcas-grid__container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .marcas-grid__item {
+    grid-column: span 1 !important;
+  }
+
+  .marcas-grid__item--small .marcas-grid__image {
+    position: static;
+    padding-bottom: 60%;
+  }
+}
+
+/* ==========================================================================
+   Marcas Detail (inline view)
+   ========================================================================== */
+
+/* Hide grid when detail is open */
+.marcas-grid__container[aria-hidden="true"] {
+  display: none;
+}
+
+.marcas-detail {
+  background: #000;
+  color: #fff;
+  position: relative;
+}
+
+.marcas-detail[aria-hidden="true"] {
+  display: none;
+}
+
+.marcas-detail[aria-hidden="false"] {
+  display: block;
+}
+
+/* Content wrapper */
+.marcas-detail__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 50px 90px;
+}
+
+/* Content wrapper */
+.marcas-detail__view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Carousel: arrows + image */
+.marcas-detail__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  gap: 20px;
+}
+
+.marcas-detail__arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marcas-detail__arrow:hover {
+  opacity: 1;
+}
+
+.marcas-detail__image-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  min-width: 0;
+}
+
+.marcas-detail__image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+/* Counter */
+.marcas-detail__counter {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+/* Title */
+.marcas-detail__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+/* Bottom bar */
+.marcas-detail__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.marcas-detail__bar-btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.marcas-detail__bar-btn:hover {
+  opacity: 1;
+}
+
+.marcas-detail__bar-btn svg {
+  flex-shrink: 0;
+}
+
+/* Image view (hidden when description is open) */
+.marcas-detail__view[aria-hidden="true"] {
+  display: none;
+}
+
+/* Description view (hidden by default, shown when toggled) */
+.marcas-detail__desc-view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.marcas-detail__desc-view[aria-hidden="true"] {
+  display: none;
+}
+
+.marcas-detail__desc-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}
+
+/* Detail mobile */
+@media (max-width: 767px) {
+  .marcas-detail__content {
+    padding: 30px 20px;
+  }
+
+  .marcas-detail__arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .marcas-detail__arrow svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .marcas-detail__title {
+    font-size: 28px;
+    line-height: 34px;
   }
 }
 
