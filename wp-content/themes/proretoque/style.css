@@ -764,3 +764,513 @@ footer.wp-block-template-part:empty {
     padding: 0;
   }
 }
+
+/* ==========================================================================
+   Contáctanos — Page layout
+   ========================================================================== */
+
+.contactanos {
+  background: #fff;
+  width: 100%;
+}
+
+.contactanos__inner {
+  /*max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 90px;*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Heading */
+.contactanos__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactanos__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000;
+  margin: 0;
+}
+
+.contactanos__subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+  margin: 0;
+}
+
+.contactanos__divider {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 0;
+}
+
+/* Form area — background image section */
+.contactanos__area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  min-height: 500px;
+  margin-bottom: 60px;
+}
+
+.contactanos__area-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url('assets/images/fondo_contacto.jpg') center / cover no-repeat;
+}
+
+.contactanos__area-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Left: info column */
+.contactanos__info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 513px;
+  flex-shrink: 0;
+}
+
+.contactanos__block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactanos__block-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  color: #000;
+  margin: 0;
+}
+
+.contactanos__horario {
+  display: flex;
+  gap: 16px;
+}
+
+.contactanos__horario-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactanos__horario-day {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+}
+
+.contactanos__horario-time {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+}
+
+.contactanos__phone-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+  margin: 0;
+}
+
+.contactanos__callback {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.contactanos__callback-input {
+  width: 320px;
+  height: 36px;
+  padding: 4px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.contactanos__callback-input::placeholder {
+  color: #737373;
+}
+
+.contactanos__callback-btn {
+  height: 36px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.contactanos__callback-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Contact links */
+.contactanos__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactanos__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 10px 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.contactanos__link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.contactanos__link svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Right: form wrap */
+.contactanos__form-wrap {
+  position: relative;
+  z-index: 1;
+  background: #F0F0F3;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 513px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.contactanos__form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactanos__form-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+  margin: 0;
+}
+
+.contactanos__form-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Contact Form 7 — Custom styling
+   ========================================================================== */
+
+.wpcf7-form {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Row: 2 columns */
+.cf7-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 16px;
+}
+
+.cf7-row > .cf7-col {
+  flex: 1;
+}
+
+/* Full-width field wrapper */
+.cf7-full {
+  margin-bottom: 16px;
+}
+
+/* Input & textarea base */
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  color: #000;
+  background: #F5F5F5;
+  border: 1px solid #9EA2A2;
+  border-radius: 0;
+  padding: 10px 16px;
+  height: 40px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form input[type="tel"]:focus,
+.wpcf7-form textarea:focus {
+  border-color: #000;
+}
+
+.wpcf7-form textarea {
+  min-height: 132px;
+  height: 132px;
+  resize: vertical;
+}
+
+.wpcf7-form input::placeholder,
+.wpcf7-form textarea::placeholder {
+  color: #9EA2A2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* "Tipo de consulta" label */
+.cf7-tipo-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  margin: 0 0 16px;
+  display: block;
+}
+
+/* Radio tabs — pill style */
+.cf7-tabs {
+  margin-bottom: 16px;
+}
+
+.cf7-tabs .wpcf7-radio {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.cf7-tabs .wpcf7-list-item {
+  margin: 0;
+}
+
+.cf7-tabs .wpcf7-list-item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.cf7-tabs .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 10px 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  user-select: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.cf7-tabs .wpcf7-list-item label:has(input:checked) {
+  background: #000;
+  color: #fff;
+}
+
+/* Checkbox */
+.cf7-checkbox {
+  margin: 0 0 16px;
+}
+
+.cf7-checkbox .wpcf7-list-item {
+  margin: 0;
+}
+
+.cf7-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  cursor: pointer;
+}
+
+.cf7-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #000;
+  flex-shrink: 0;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit button */
+.wpcf7-form input[type="submit"] {
+  width: 100%;
+  height: 36px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.wpcf7-form input[type="submit"]:hover {
+  background: #333;
+}
+
+/* Validation messages */
+.wpcf7-not-valid-tip {
+  font-size: 13px;
+  color: #d32f2f;
+  margin-top: 4px;
+}
+
+.wpcf7-response-output {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin: 16px 0 0;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   Contáctanos — Responsive
+   ========================================================================== */
+
+@media (max-width: 1259px) {
+  .contactanos__inner {
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  .contactanos__area {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .contactanos__info {
+    width: 100%;
+  }
+
+  .contactanos__form-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contactanos__inner {
+    padding: 0 20px;
+    gap: 32px;
+  }
+
+  .contactanos__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .contactanos__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .contactanos__area {
+    padding: 20px;
+  }
+
+  .contactanos__form-wrap {
+    padding: 20px;
+  }
+
+  .contactanos__callback {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contactanos__callback-input {
+    width: 100%;
+  }
+
+  .cf7-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cf7-tabs .wpcf7-radio {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
