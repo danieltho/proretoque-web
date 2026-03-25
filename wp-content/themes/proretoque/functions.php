@@ -187,6 +187,19 @@ add_action( 'wp_enqueue_scripts', function () {
     ] );
 } );
 
+// Enqueue CF7 radio tabs click handler.
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_admin() ) {
+        wp_enqueue_script(
+            'proretoque-cf7-radio-tabs',
+            get_stylesheet_directory_uri() . '/assets/js/cf7-radio-tabs.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+} );
+
 // Shortcode: [proretoque_contactanos].
 add_shortcode( 'proretoque_contactanos', function () {
     ob_start();

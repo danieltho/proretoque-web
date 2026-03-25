@@ -1097,7 +1097,7 @@ footer.wp-block-template-part:empty {
 
 .cf7-tabs .wpcf7-radio {
   display: flex;
-  gap: 0;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -1105,15 +1105,20 @@ footer.wp-block-template-part:empty {
   margin: 0;
 }
 
+/* Collapse double borders between adjacent pills */
+.cf7-tabs .wpcf7-list-item + .wpcf7-list-item .wpcf7-list-item-label {
+  margin-left: -1px;
+}
+
 .cf7-tabs .wpcf7-list-item input[type="radio"] {
-  position: absolute;
+  position: absolute !important;
   opacity: 0;
   width: 0;
   height: 0;
   pointer-events: none;
 }
 
-.cf7-tabs .wpcf7-list-item label {
+.cf7-tabs .wpcf7-list-item .wpcf7-list-item-label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1132,11 +1137,13 @@ footer.wp-block-template-part:empty {
   user-select: none;
   white-space: nowrap;
   box-sizing: border-box;
+  position: relative;
 }
 
-.cf7-tabs .wpcf7-list-item label:has(input:checked) {
+.cf7-tabs input[type="radio"]:checked ~ .wpcf7-list-item-label{
   background: #000;
   color: #fff;
+  z-index: 1;
 }
 
 /* Checkbox */
