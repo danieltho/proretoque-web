@@ -146,6 +146,59 @@ add_action( 'wp_enqueue_scripts', function () {
     }
 } );
 
+// Register CPT: Before & After.
+add_action( 'init', function () {
+    register_post_type( 'before_after', [
+        'labels' => [
+            'name'               => 'Before & After',
+            'singular_name'      => 'Before & After',
+            'add_new'            => 'Añadir Before & After',
+            'add_new_item'       => 'Añadir Nuevo Before & After',
+            'edit_item'          => 'Editar Before & After',
+            'new_item'           => 'Nuevo Before & After',
+            'view_item'          => 'Ver Before & After',
+            'search_items'       => 'Buscar Before & After',
+            'not_found'          => 'No se encontraron entradas',
+            'not_found_in_trash' => 'No se encontraron entradas en la papelera',
+        ],
+        'public'       => false,
+        'show_ui'      => true,
+        'show_in_rest' => true,
+        'has_archive'  => false,
+        'rewrite'      => [ 'slug' => 'before-after' ],
+        'supports'     => [ 'title', 'editor', 'thumbnail', 'excerpt' ],
+        'menu_icon'    => 'dashicons-image-flip-horizontal',
+    ] );
+} );
+
+// Hide page title on pages that use the before_after shortcode.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_before_after' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
+
+// Shortcode: [proretoque_before_after].
+add_shortcode( 'proretoque_before_after', function () {
+    ob_start();
+    include get_stylesheet_directory() . '/parts/before-after-grid.php';
+    return ob_get_clean();
+} );
+
+// Enqueue before-after slider JS.
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_admin() ) {
+        wp_enqueue_script(
+            'proretoque-before-after-slider',
+            get_stylesheet_directory_uri() . '/assets/js/before-after-slider.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+} );
+
 // AJAX handler for About page contact form.
 add_action( 'wp_ajax_proretoque_contact', 'proretoque_handle_contact_form' );
 add_action( 'wp_ajax_nopriv_proretoque_contact', 'proretoque_handle_contact_form' );
