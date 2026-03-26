@@ -250,6 +250,13 @@ add_action( 'wp_enqueue_scripts', function () {
             '1.0.0',
             true
         );
+        wp_enqueue_script(
+            'proretoque-cf7-upload-zone',
+            get_stylesheet_directory_uri() . '/assets/js/cf7-upload-zone.js',
+            [],
+            '1.0.0',
+            true
+        );
     }
 } );
 
@@ -267,3 +274,46 @@ add_filter( 'the_title', function ( $title, $id ) {
     }
     return $title;
 }, 10, 2 );
+
+// Shortcode: [proretoque_empieza_proyecto].
+add_shortcode( 'proretoque_empieza_proyecto', function () {
+    ob_start();
+    include get_stylesheet_directory() . '/parts/empieza-proyecto.php';
+    return ob_get_clean();
+} );
+
+// Hide page title on "Empieza tu proyecto" page.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_empieza_proyecto' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
+
+// Shortcode: [proretoque_trabaja].
+add_shortcode( 'proretoque_trabaja', function () {
+    ob_start();
+    include get_stylesheet_directory() . '/parts/trabaja-con-nosotros.php';
+    return ob_get_clean();
+} );
+
+// Hide page title on "Trabaja con Nosotros" page.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_trabaja' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
+
+// Enqueue Trabaja toggle JS.
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_admin() ) {
+        wp_enqueue_script(
+            'proretoque-trabaja-toggle',
+            get_stylesheet_directory_uri() . '/assets/js/trabaja-toggle.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+} );

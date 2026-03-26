@@ -1595,3 +1595,675 @@ footer.wp-block-template-part:empty {
     gap: 8px;
   }
 }
+
+/* ==========================================================================
+   Empieza tu proyecto — Page layout
+   ========================================================================== */
+
+.proyecto {
+  background: #fff;
+  width: 100%;
+}
+
+.proyecto__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Heading */
+.proyecto__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.proyecto__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000;
+  margin: 0;
+}
+
+.proyecto__subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+}
+
+.proyecto__subtitle p {
+  margin: 0;
+}
+
+.proyecto__divider {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 0;
+}
+
+/* Form area */
+.proyecto__area {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 60px;
+}
+
+/* Left: info column */
+.proyecto__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 50%;
+  flex-shrink: 0;
+  padding: 50px 32px;
+  box-sizing: border-box;
+}
+
+.proyecto__info-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.proyecto__info-bg {
+  background: url('assets/images/fondo_proyecto.jpg') center / cover no-repeat;
+}
+
+.proyecto__info-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.proyecto__block {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.proyecto__block-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  color: #000;
+  margin: 0;
+}
+
+.proyecto__block-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  margin: 0;
+}
+
+.proyecto__horario {
+  display: flex;
+  gap: 16px;
+}
+
+.proyecto__horario-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto__horario-day {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+}
+
+.proyecto__horario-time {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+}
+
+.proyecto__phone-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+  margin: 0;
+}
+
+.proyecto__callback {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.proyecto__callback-input {
+  width: 320px;
+  height: 36px;
+  padding: 4px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.proyecto__callback-input::placeholder {
+  color: #737373;
+}
+
+.proyecto__callback-btn {
+  height: 36px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.proyecto__callback-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Contact links */
+.proyecto__links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 10px 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.proyecto__link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.proyecto__link svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Right: form wrap */
+.proyecto__form-wrap {
+  position: relative;
+  z-index: 1;
+  background: #F0F0F3;
+  padding: 50px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  width: 50%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.proyecto__form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.proyecto__form-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+  margin: 0;
+}
+
+.proyecto__form-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  margin: 0;
+}
+
+/* Proyecto form — file upload areas */
+.cf7-upload-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cf7-upload-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cf7-upload-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  text-align: center;
+}
+
+.cf7-upload-col .wpcf7-form-control-wrap {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+/* Visual drop zone overlay */
+.cf7-upload-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 130px;
+  border: 0.5px dashed #000;
+  padding: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.cf7-upload-zone.is-dragover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.cf7-upload-zone.has-file {
+  border-color: #000;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.cf7-upload-zone svg {
+  width: 32px;
+  height: 32px;
+  color: #0a0a0a;
+  pointer-events: none;
+}
+
+.cf7-upload-zone .cf7-upload-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0a0a0a;
+  text-align: center;
+  max-width: 149px;
+  pointer-events: none;
+}
+
+/* Hide native file input — overlay on top of the zone */
+.cf7-upload-col input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Empieza tu proyecto — Responsive
+   ========================================================================== */
+
+@media (max-width: 1259px) {
+  .proyecto__inner {
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  .proyecto__area {
+    flex-direction: column;
+  }
+
+  .proyecto__info {
+    width: 100%;
+  }
+
+  .proyecto__form-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .proyecto__inner {
+    padding: 0 20px;
+    gap: 32px;
+  }
+
+  .proyecto__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .proyecto__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .proyecto__info {
+    padding: 32px 20px;
+    gap: 32px;
+  }
+
+  .proyecto__form-wrap {
+    padding: 32px 20px;
+  }
+
+  .proyecto__callback {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .proyecto__callback-input {
+    width: 100%;
+  }
+
+  .cf7-upload-row {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   Trabaja con Nosotros — Page layout
+   ========================================================================== */
+
+.trabaja {
+  background: #fff;
+  width: 100%;
+}
+
+.trabaja__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Heading */
+.trabaja__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trabaja__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000;
+  margin: 0;
+}
+
+.trabaja__subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+  margin: 0;
+}
+
+.trabaja__divider {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 0;
+}
+
+/* Form area — background image section */
+.trabaja__area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  min-height: 500px;
+  margin-bottom: 60px;
+}
+
+.trabaja__area-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url('assets/images/fondo_trabaja.jpg') center / cover no-repeat;
+}
+
+.trabaja__area-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Left: info column */
+.trabaja__info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  width: 513px;
+  flex-shrink: 0;
+}
+
+/* Toggle tabs — Soy Retocador / No soy Retocador */
+.trabaja__toggle {
+  display: inline-flex;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.trabaja__toggle-btn {
+  height: 36px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0a0a0a;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.trabaja__toggle-btn.is-active {
+  background: #000;
+  color: #fff;
+}
+
+.trabaja__toggle-btn:first-child {
+  border-right: 1px solid #f0f0f3;
+}
+
+.trabaja__info-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26.4px;
+  color: #000;
+}
+
+.trabaja__info-text p {
+  margin: 0 0 16px;
+}
+
+.trabaja__info-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact links */
+.trabaja__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.trabaja__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  padding: 10px 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.trabaja__link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.trabaja__link svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Right: form wrap */
+.trabaja__form-wrap {
+  position: relative;
+  z-index: 1;
+  background: #F0F0F3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 520px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Panel toggle */
+.trabaja__form-panel {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trabaja__form-panel.is-active {
+  display: flex;
+}
+
+.trabaja__form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trabaja__form-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  color: #000;
+  margin: 0;
+}
+
+.trabaja__form-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Trabaja con Nosotros — Responsive
+   ========================================================================== */
+
+@media (max-width: 1259px) {
+  .trabaja__inner {
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  .trabaja__area {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .trabaja__info {
+    width: 100%;
+  }
+
+  .trabaja__form-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .trabaja__inner {
+    padding: 0 20px;
+    gap: 32px;
+  }
+
+  .trabaja__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .trabaja__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .trabaja__area {
+    padding: 20px;
+  }
+
+  .trabaja__form-wrap {
+    padding: 20px;
+  }
+
+  .trabaja__info-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
