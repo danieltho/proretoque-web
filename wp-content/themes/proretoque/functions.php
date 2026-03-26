@@ -317,3 +317,56 @@ add_action( 'wp_enqueue_scripts', function () {
         );
     }
 } );
+
+// Register CPT: FAQ.
+add_action( 'init', function () {
+    register_post_type( 'faq', [
+        'labels' => [
+            'name'               => 'Preguntas Frecuentes',
+            'singular_name'      => 'Pregunta Frecuente',
+            'add_new'            => 'Añadir Pregunta',
+            'add_new_item'       => 'Añadir Nueva Pregunta',
+            'edit_item'          => 'Editar Pregunta',
+            'new_item'           => 'Nueva Pregunta',
+            'view_item'          => 'Ver Pregunta',
+            'search_items'       => 'Buscar Preguntas',
+            'not_found'          => 'No se encontraron preguntas',
+            'not_found_in_trash' => 'No se encontraron preguntas en la papelera',
+        ],
+        'public'       => false,
+        'show_ui'      => true,
+        'show_in_rest' => true,
+        'has_archive'  => false,
+        'rewrite'      => [ 'slug' => 'faq' ],
+        'supports'     => [ 'title', 'editor', 'page-attributes' ],
+        'menu_icon'    => 'dashicons-editor-help',
+    ] );
+} );
+
+// Shortcode: [proretoque_faq].
+add_shortcode( 'proretoque_faq', function () {
+    ob_start();
+    include get_stylesheet_directory() . '/parts/faq.php';
+    return ob_get_clean();
+} );
+
+// Hide page title on FAQ page.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_faq' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
+
+// Enqueue FAQ accordion JS.
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_admin() ) {
+        wp_enqueue_script(
+            'proretoque-faq-accordion',
+            get_stylesheet_directory_uri() . '/assets/js/faq-accordion.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+} );
