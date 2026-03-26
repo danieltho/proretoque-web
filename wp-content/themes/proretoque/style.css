@@ -489,6 +489,320 @@ footer.wp-block-template-part:empty {
 }
 
 /* ==========================================================================
+   Before & After
+   ========================================================================== */
+
+.beaf__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 90px;
+}
+
+.beaf__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.beaf__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.beaf__slider {
+  width: 834px;
+  max-width: 100%;
+}
+
+.beaf__slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  border-radius: 12px;
+  background-color: #f0f0f3;
+}
+
+.beaf__slider-wrapper--active {
+  cursor: grabbing;
+}
+
+.beaf__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.beaf__image--after {
+  display: block;
+}
+
+.beaf__clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.beaf__clip .beaf__image--before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+}
+
+.beaf__divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #000;
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: ew-resize;
+}
+
+.beaf__handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f0f0f3;
+  border: 1px solid #000;
+  border-radius: 100px;
+  padding: 16px 4px;
+  cursor: ew-resize;
+  z-index: 3;
+}
+
+.beaf__handle svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.beaf__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.beaf__item-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31.2px;
+  color: #000;
+  margin: 0;
+}
+
+.beaf__item-count {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  margin: 0;
+}
+
+/* Hidden in grid, moved to detail view by JS */
+.beaf__description {
+  display: none;
+}
+
+/* Tablet */
+@media (max-width: 1259px) {
+  .beaf__container {
+    padding: 0 40px;
+  }
+
+  .beaf__slider {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .beaf__container {
+    padding: 0 20px;
+    gap: 24px;
+  }
+
+  .beaf__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .beaf__item-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+/* ==========================================================================
+   Before & After — Detail view
+   ========================================================================== */
+
+/* Toggle grid/detail via aria-hidden */
+.beaf__container[aria-hidden="true"] {
+  display: none;
+}
+
+.beaf-detail[aria-hidden="true"] {
+  display: none;
+}
+
+.beaf-detail[aria-hidden="false"] {
+  display: block;
+}
+
+.beaf-detail__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 90px 50px;
+}
+
+/* Header with back button + centered title */
+.beaf-detail__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+}
+
+.beaf-detail__back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #0a0a0a;
+  padding: 8px 10px;
+  height: 36px;
+}
+
+.beaf-detail__back:hover {
+  text-decoration: underline;
+}
+
+.beaf-detail__back svg {
+  flex-shrink: 0;
+}
+
+.beaf-detail__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+/* Sliders container — stacked vertically */
+.beaf-detail__sliders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+}
+
+.beaf-detail__sliders .beaf__slider {
+  width: 834px;
+  max-width: 100%;
+}
+
+/* Description */
+.beaf-detail__description {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000;
+  max-width: 830px;
+  width: 100%;
+  margin: 0;
+}
+
+/* Detail — Tablet */
+@media (max-width: 1259px) {
+  .beaf-detail__content {
+    padding: 0 40px 50px;
+  }
+
+  .beaf-detail__sliders .beaf__slider {
+    width: 100%;
+  }
+}
+
+/* Detail — Mobile */
+@media (max-width: 767px) {
+  .beaf-detail__content {
+    padding: 0 20px 30px;
+    gap: 32px;
+  }
+
+  .beaf-detail__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .beaf-detail__back {
+    position: static;
+    align-self: flex-start;
+  }
+
+  .beaf-detail__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .beaf-detail__sliders {
+    gap: 32px;
+  }
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 
