@@ -239,3 +239,31 @@ add_action( 'wp_enqueue_scripts', function () {
         'nonce' => wp_create_nonce( 'proretoque_contact_nonce' ),
     ] );
 } );
+
+// Enqueue CF7 radio tabs click handler.
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_admin() ) {
+        wp_enqueue_script(
+            'proretoque-cf7-radio-tabs',
+            get_stylesheet_directory_uri() . '/assets/js/cf7-radio-tabs.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+} );
+
+// Shortcode: [proretoque_contactanos].
+add_shortcode( 'proretoque_contactanos', function () {
+    ob_start();
+    include get_stylesheet_directory() . '/parts/contactanos.php';
+    return ob_get_clean();
+} );
+
+// Hide page title on contact page.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_contactanos' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
