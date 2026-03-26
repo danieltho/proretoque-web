@@ -2280,6 +2280,7 @@ footer.wp-block-template-part:empty {
 .faq__inner {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   max-width: 1260px;
   margin: 0 auto;
   padding: 60px 0;
@@ -2355,7 +2356,7 @@ footer.wp-block-template-part:empty {
 
 /* Accordion item */
 .faq__item {
-  padding: 0 16px 24px;
+  padding: 0 ;
 }
 
 .faq__item-line {
