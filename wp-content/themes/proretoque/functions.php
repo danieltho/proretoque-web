@@ -370,3 +370,31 @@ add_action( 'wp_enqueue_scripts', function () {
         );
     }
 } );
+
+// Shortcode: [proretoque_sobre_nosotros].
+add_shortcode( 'proretoque_sobre_nosotros', function () {
+    ob_start();
+    include get_stylesheet_directory() . '/parts/sobre-nosotros.php';
+    return ob_get_clean();
+} );
+
+// Hide page title on Sobre Nosotros page.
+add_filter( 'the_title', function ( $title, $id ) {
+    if ( is_page() && in_the_loop() && is_main_query() && has_shortcode( get_post_field( 'post_content', $id ), 'proretoque_sobre_nosotros' ) ) {
+        return '';
+    }
+    return $title;
+}, 10, 2 );
+
+// Enqueue Sobre Nosotros JS.
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_admin() ) {
+        wp_enqueue_script(
+            'proretoque-sobre-nosotros',
+            get_stylesheet_directory_uri() . '/assets/js/sobre-nosotros.js',
+            [],
+            '1.0.0',
+            true
+        );
+    }
+} );

@@ -71,7 +71,7 @@ if ( ! $marcas->have_posts() ) {
         <article class="marcas-grid__item <?php echo esc_attr( $size_class ); ?>"
                 data-marca-slug="<?php echo esc_attr( $slug ); ?>"
                 data-marca-title="<?php echo esc_attr( $title ); ?>"
-                data-marca-description="<?php echo esc_attr( get_the_excerpt() ); ?>"
+                data-marca-description="<?php echo esc_attr( $content ); ?>"
                 data-marca-images="<?php echo esc_attr( wp_json_encode( $gallery_images ) ); ?>">
             <?php if ( $thumb_url ) : ?>
                 <div class="marcas-grid__image" style="background-image: url('<?php echo esc_url( $thumb_url ); ?>')"></div>

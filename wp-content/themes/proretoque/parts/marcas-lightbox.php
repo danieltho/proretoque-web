@@ -17,13 +17,12 @@
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M18 12L30 24L18 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
             </div>
-            <span class="marcas-detail__counter" id="marcasDetailCounter">1/3</span>
             <h2 class="marcas-detail__title" id="marcasDetailTitle"></h2>
         </div>
 
         <div class="marcas-detail__desc-view" id="marcasDescPanel" aria-hidden="true">
             <h2 class="marcas-detail__title" id="marcasDescTitle"></h2>
-            <p class="marcas-detail__desc-text" id="marcasDescText"></p>
+            <div class="marcas-detail__desc-text" id="marcasDescText"></div>
         </div>
 
         <div class="marcas-detail__bar">
@@ -31,6 +30,7 @@
                 <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><path d="M30 12L18 24L30 36" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 Inicio
             </button>
+            <span class="marcas-detail__counter" id="marcasDetailCounter">1/3</span>
             <button class="marcas-detail__bar-btn" id="marcasDetailDescToggle">Descripción</button>
         </div>
     </div>
